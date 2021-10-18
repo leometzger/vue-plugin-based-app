@@ -1,27 +1,19 @@
 import { PaymentState } from "./store/state";
 import { PluginOptions } from "@vpba/customer-interface";
 
+import PaymentList from "./views/PaymentList.vue";
 import { paymentStore } from "./store";
 
 export default (_, options: PluginOptions<PaymentState>) => {
   options.menuManager.addOption({
-    title: "Payment",
-    options: [
-      {
-        title: "Account",
-        route: "/payment/debit",
-      },
-      {
-        title: "Trasactions",
-        route: "/payment/transactions",
-      },
-    ],
+    title: "Payments",
+    route: "/payment/list",
   });
 
   options.routeManager.registerRoute("main", {
-    name: "payment-debit",
-    path: "/payment/debit",
-    component: null,
+    name: "payment-list",
+    path: "/payment/list",
+    component: PaymentList,
   });
 
   options.vuexManager.registerModule("payment", paymentStore);

@@ -1,10 +1,13 @@
+import App from "./App.vue";
+import Home from "./views/Home.vue";
+
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
+import PluginPayment from "@vpba/plugin-payment";
+
 import { createApp } from "vue";
 import { createStore } from "vuex";
 import { createRouter, createWebHashHistory } from "vue-router";
-
-import App from "./App.vue";
-import ElementPlus from "element-plus";
-import PluginPayment from "@vpba/plugin-payment";
 
 import {
   MainMenuManager,
@@ -14,15 +17,34 @@ import {
 } from "./plugin-api/index";
 import { PluginOptions, RootState } from "@vpba/customer-interface";
 
+import MainLayout from "./layouts/MainLayout.vue";
+import vuexStore from "./store/index";
+
+/**
+ * Bootstraps the application
+ */
 function bootstrap() {
   const app = createApp(App);
   const router = createRouter({
-    routes: [],
+    routes: [
+      {
+        path: "/",
+        name: "main",
+        component: MainLayout,
+        children: [
+          {
+            path: "",
+            name: "home",
+            component: Home,
+          },
+        ],
+      },
+    ],
     history: createWebHashHistory(),
   });
-  const store = createStore({});
+  const store = createStore(vuexStore);
   const options: PluginOptions<RootState> = {
-    menuManager: new MainMenuManager(),
+    menuManager: new MainMenuManager(store),
     themeManager: new MainThemeManager(),
     routeManager: new MainRouteManager(router),
     vuexManager: new MainVuexManager(store),

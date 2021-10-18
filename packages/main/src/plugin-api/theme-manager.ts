@@ -2,14 +2,14 @@ import { ThemeManager } from "@vpba/customer-interface";
 
 export class MainThemeManager implements ThemeManager {
   primaryColor(color: string): ThemeManager {
-    throw new Error("Method not implemented.");
+    return this;
   }
 
   secondaryColor(color: string): ThemeManager {
-    throw new Error("Method not implemented.");
+    return this;
   }
 
   accentColor(color: string): ThemeManager {
-    throw new Error("Method not implemented.");
+    return this;
   }
 }

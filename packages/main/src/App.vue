@@ -1,11 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-view />
 </template>
-
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
 
 <style>
 #app {
@@ -14,6 +9,7 @@ import HelloWorld from "./components/HelloWorld.vue";
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  width: 100%;
 }
 </style>

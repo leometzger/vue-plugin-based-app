@@ -35,7 +35,7 @@ importers:
       vuex: ^4.0.2
     dependencies:
       '@vpba/customer-interface': link:../customer-interface
-      '@vpba/plugin-payment': link:../plugin-payment
+      '@vpba/plugin-payment': link:../plugins/payment
       element-plus: 1.1.0-beta.20_vue@3.2.19
       vue: 3.2.19
       vue-router: 4.0.12_vue@3.2.19
@@ -49,7 +49,7 @@ importers:
       vite: 2.6.2
       vue-tsc: 0.3.0_typescript@4.4.3
 
-  packages/plugin-payment:
+  packages/plugins/payment:
     specifiers:
       '@vpba/customer-interface': workspace:^0.0.0
       typescript: ^4.3.2
@@ -57,7 +57,7 @@ importers:
       vue: ^3.2.16
       vuex: ^4.0.2
     dependencies:
-      '@vpba/customer-interface': link:../customer-interface
+      '@vpba/customer-interface': link:../../customer-interface
       vue: 3.2.19
       vuex: 4.0.2_vue@3.2.19
     devDependencies:

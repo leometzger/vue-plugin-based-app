@@ -9,6 +9,8 @@ export class MainRouteManager implements RouteManager {
   }
 
   registerRoute(parentName: string, route: RouteRecordRaw): RouteManager {
+    this.router.addRoute(parentName, route);
+
     return this;
   }
 }
