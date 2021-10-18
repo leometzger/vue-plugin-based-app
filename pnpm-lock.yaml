@@ -23,6 +23,7 @@ importers:
       '@vitejs/plugin-vue': ^1.9.2
       '@vpba/customer-interface': workspace:0.0.0
       '@vpba/plugin-payment': workspace:0.0.0
+      '@vpba/plugin-products': workspace:^0.0.0
       element-plus: ^1.1.0-beta.20
       eslint: ^8.0.1
       eslint-plugin-vue: ^7.19.1
@@ -36,6 +37,7 @@ importers:
     dependencies:
       '@vpba/customer-interface': link:../customer-interface
       '@vpba/plugin-payment': link:../plugins/payment
+      '@vpba/plugin-products': link:../plugins/products
       element-plus: 1.1.0-beta.20_vue@3.2.19
       vue: 3.2.19
       vue-router: 4.0.12_vue@3.2.19

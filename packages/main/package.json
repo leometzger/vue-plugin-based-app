@@ -9,6 +9,7 @@
   "dependencies": {
     "@vpba/customer-interface": "workspace:0.0.0",
     "@vpba/plugin-payment": "workspace:0.0.0",
+    "@vpba/plugin-products": "workspace:^0.0.0",
     "element-plus": "^1.1.0-beta.20",
     "vue": "^3.2.16",
     "vue-router": "4",

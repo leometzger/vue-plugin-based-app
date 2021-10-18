@@ -1,0 +1,19 @@
+{
+	"name": "@vpba/plugin-products",
+	"version": "0.0.0",
+	"main": "lib/main.ts",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"@vpba/customer-interface": "workspace:^0.0.0",
+		"vue": "^3.2.16",
+		"vuex": "^4.0.2"
+	},
+	"devDependencies": {
+		"typescript": "^4.3.2",
+		"vite": "^2.6.4"
+	}
+}

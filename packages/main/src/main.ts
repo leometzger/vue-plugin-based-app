@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import PluginPayment from "@vpba/plugin-payment";
+import PluginProducts from "@vpba/plugin-products";
 
 import { createApp } from "vue";
 import { createStore } from "vuex";
@@ -19,6 +20,9 @@ import { PluginOptions, RootState } from "@vpba/customer-interface";
 
 import MainLayout from "./layouts/MainLayout.vue";
 import vuexStore from "./store/index";
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 
 /**
  * Bootstraps the application
@@ -54,7 +58,12 @@ function bootstrap() {
   app.use(store);
   app.use(router);
 
-  app.use(PluginPayment, options);
+  if (urlParams.get("withProducts")) {
+    app.use(PluginProducts, options);
+  }
+  if (urlParams.get("withPayment")) {
+    app.use(PluginPayment, options);
+  }
 
   app.mount("#app");
 }
