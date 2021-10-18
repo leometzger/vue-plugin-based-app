@@ -1,0 +1,9 @@
+{
+  "name": "vue-plugin-based-app",
+  "description": "An approach of plugins with vite and Vue 3",
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
+}

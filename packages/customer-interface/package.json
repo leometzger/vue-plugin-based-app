@@ -1,0 +1,16 @@
+{
+	"name": "@vpba/customer-interface",
+	"version": "0.0.0",
+	"main": "lib/main.ts",
+	"scripts": {
+		"build": "tsc && vite build"
+	},
+	"devDependencies": {
+		"typescript": "^4.3.2",
+		"vite": "^2.6.4"
+	},
+	"dependencies": {
+		"vue-router": "4",
+		"vuex": "^4.0.2"
+	}
+}
